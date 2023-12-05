@@ -80,18 +80,19 @@
 		label
 			+checkbox("setting_extra_xp").checkbox.squarebox
 			span(data-i18n="show_extra_xp_condition")
-	.setting-char
-		label
-			+checkbox("setting_vampirexp").checkbox.squarebox
-			span(data-i18n="extra_xp_boxes")
-	.setting-char
-		label
-			+checkbox("setting_show_strictures").checkbox.squarebox
-			span(data-i18n="show_vampire_strictures")
-	.setting-char
-		label
-			+checkbox("setting_show_frame").checkbox.squarebox
-			span(data-i18n="show_frame_section")
+	//- TODO DELETE
+	//- .setting-char
+	//- 	label
+	//- 		+checkbox("setting_vampirexp").checkbox.squarebox
+	//- 		span(data-i18n="extra_xp_boxes")
+	//- .setting-char
+	//- 	label
+	//- 		+checkbox("setting_show_strictures").checkbox.squarebox
+	//- 		span(data-i18n="show_vampire_strictures")
+	//- .setting-char
+	//- 	label
+	//- 		+checkbox("setting_show_frame").checkbox.squarebox
+	//- 		span(data-i18n="show_frame_section")
 	.setting-char.setting-crew
 		label
 			+checkbox("setting_show_itemdesc")(checked).checkbox.squarebox
@@ -104,18 +105,19 @@
 		label
 			+checkbox("setting_show_frienddesc")(checked).checkbox.squarebox
 			span(data-i18n="show_friend_contact_details")
-	.setting-char
-		label
-			+checkbox("setting_show_bandolier").checkbox.squarebox
-			span(data-i18n="show_bandolier_slots")
-	.setting-crew
-		label
-			+checkbox("setting_show_deity").checkbox.squarebox
-			span(data-i18n="show_deity")
-	.setting-crew
-		label
-			+text-input("setting_deity_label")(value="Deity")
-			span(data-i18n="deity_label")
+	//- TODO DELETE
+	//- .setting-char
+	//- 	label
+	//- 		+checkbox("setting_show_bandolier").checkbox.squarebox
+	//- 		span(data-i18n="show_bandolier_slots")
+	//- .setting-crew
+	//- 	label
+	//- 		+checkbox("setting_show_deity").checkbox.squarebox
+	//- 		span(data-i18n="show_deity")
+	//- .setting-crew
+	//- 	label
+	//- 		+text-input("setting_deity_label")(value="Deity")
+	//- 		span(data-i18n="deity_label")
 	.setting-char
 		label
 			+text-input("setting_stress_label")(value="Stress")
@@ -124,10 +126,11 @@
 		label
 			+text-input("setting_trauma_label")(value="Trauma")
 			span(data-i18n="trauma_label")
-	.setting-char
-		label
-			+text-input("setting_alchemicals_label")(value="Alchemicals")
-			span(data-i18n="alchemicals_label")
+	//- TODO DELETE
+	//- .setting-char
+	//- 	label
+	//- 		+text-input("setting_alchemicals_label")(value="Alchemicals")
+	//- 		span(data-i18n="alchemicals_label")
 	.setting-crew
 		label
 			+text-input("setting_heat_label")(value="Heat")
@@ -138,20 +141,25 @@
 			span(data-i18n="wanted_label")
 	.setting-crew
 		label
-			+checkbox("setting_show_origin").checkbox.squarebox
-			span(data-i18n="show_origin")
-	.setting-char
-		span(data-i18n="dark_talent")
-		span
+			+checkbox("setting_show_loyalty").checkbox.squarebox
+			span(data-i18n="show_loyalty")
+	.setting-crew
 		label
-			+checkbox("setting_dark_talent_insight").checkbox.squarebox
-			span(data-i18n="insight")
-		label
-			+checkbox("setting_dark_talent_prowess").checkbox.squarebox
-			span(data-i18n="prowess")
-		label
-			+checkbox("setting_dark_talent_resolve").checkbox.squarebox
-			span(data-i18n="resolve")
+			+checkbox("setting_show_purpose").checkbox.squarebox
+			span(data-i18n="show_purpose")
+	//- TODO DELETE
+	//- .setting-char
+	//- 	span(data-i18n="dark_talent")
+	//- 	span
+	//- 	label
+	//- 		+checkbox("setting_dark_talent_insight").checkbox.squarebox
+	//- 		span(data-i18n="insight")
+	//- 	label
+	//- 		+checkbox("setting_dark_talent_prowess").checkbox.squarebox
+	//- 		span(data-i18n="prowess")
+	//- 	label
+	//- 		+checkbox("setting_dark_talent_resolve").checkbox.squarebox
+	//- 		span(data-i18n="resolve")
 	.setting-char
 		span(data-i18n="resistance_bonus")
 		label
@@ -182,17 +190,19 @@
 		label
 			select(name="attr_setting_traumata_set")
 				option(value="normal", data-i18n="normal", selected)
-				option(value="ghost", data-i18n="ghost")
-				option(value="hull", data-i18n="hull")
-				option(value="vampire", data-i18n="vampire")
+				//- TODO MAKE THIS JUST A DEFAULT VALUE, NOT A SETTING
+				//- option(value="ghost", data-i18n="ghost")
+				//- option(value="hull", data-i18n="hull")
+				//- option(value="vampire", data-i18n="vampire")
 			span(data-i18n="traumata")
 	.setting-char
 		label
 			select(name="attr_setting_vice_type")
 				option(value="normal", data-i18n="normal", selected)
-				option(value="ghost", data-i18n="ghost")
-				option(value="hull", data-i18n="hull")
-				option(value="vampire", data-i18n="vampire")
+				//- TODO MAKE THIS JUST A DEFAULT VALUE, NOT A SETTING
+				//- option(value="ghost", data-i18n="ghost")
+				//- option(value="hull", data-i18n="hull")
+				//- option(value="vampire", data-i18n="vampire")
 			span(data-i18n="vice")
 	.setting-char.setting-crew.setting-faction
 		label
@@ -210,6 +220,7 @@
 		label
 			+checkbox("setting_autofill")(checked).checkbox.squarebox
 			span(data-i18n="fill_fields")
+	//- TODO REPLACE THIS WITH PRIMITIVE
 	.setting-char.setting-crew.setting-faction.kirsty-option
 		label
 			+checkbox("setting_usekirsty").checkbox.squarebox

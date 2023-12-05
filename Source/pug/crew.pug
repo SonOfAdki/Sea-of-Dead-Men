@@ -1,14 +1,15 @@
-mixin claimbox(number)
-	+hidden-input(`claim_${number}_check`)(value="0")
-	.claimbox
-		label
-			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
-		+textarea(`claim_${number}_name`).label
-		+textarea(`claim_${number}_desc`).claim-desc
+//- TODO DELETE
+//- mixin claimbox(number)
+//- 	+hidden-input(`claim_${number}_check`)(value="0")
+//- 	.claimbox
+//- 		label
+//- 			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
+//- 		+textarea(`claim_${number}_name`).label
+//- 		+textarea(`claim_${number}_desc`).claim-desc
 
-mixin claimbridge(number, type)
-	label(class=["claimbridge", type === "vert" ? "claims-vertsep" : "claims-horisep"])
-		+checkbox(`claim_bridge_${number}`)(checked)
+//- mixin claimbridge(number, type)
+//- 	label(class=["claimbridge", type === "vert" ? "claims-vertsep" : "claims-horisep"])
+//- 		+checkbox(`claim_bridge_${number}`)(checked)
 
 mixin makeupgrade(label, numboxes, def, desc)
 	div
@@ -35,26 +36,35 @@ mixin makeupgrade(label, numboxes, def, desc)
 			+text-input("reputation")
 			.label.text.title(data-i18n="reputation")
 		label.sheet-2col
-			+text-input("lair")
-			.label.text.title(data-i18n="lair")
-		+hidden-input("setting_show_deity")(value="0").hider
-		label
-			+text-input("crew_deity")
-			.label.text.title
-				span(name="attr_setting_deity_label")
-		+hidden-input("setting_show_deity")(value="0").hider
-		label
-			+text-input("crew_deity_features")(data-i18n-placeholder="choose_2_features")
-			+hidden-input("crew_deity_features")(value="")
-			.text
-				span.label.title
-					span(name="attr_setting_deity_label").space-after
-					span(data-i18n="features")
-				span.uppercase.info(data-i18n="deity_features_info")
-		+hidden-input("setting_show_origin")(value="0").hider
+			+text-input("flagship")
+			.label.text.title(data-i18n="flagship")
+		+hidden-input("setting_show_purpose")(value="0").hider
 		label.sheet-2col
-			+text-input("origin")
-			.label.text.title(data-i18n="origin")
+			+text-input("purpose")
+			.label.text.title(data-i18n="purpose")
+		+hidden-input("setting_show_loyalty")(value="0").hider
+		label.sheet-2col
+			+text-input("loyalty")
+			.label.text.title(data-i18n="loyalty")
+		//- TODO DELETE
+		//- +hidden-input("setting_show_deity")(value="0").hider
+		//- label
+		//- 	+text-input("crew_deity")
+		//- 	.label.text.title
+		//- 		span(name="attr_setting_deity_label")
+		//- +hidden-input("setting_show_deity")(value="0").hider
+		//- label
+		//- 	+text-input("crew_deity_features")(data-i18n-placeholder="choose_2_features")
+		//- 	+hidden-input("crew_deity_features")(value="")
+		//- 	.text
+		//- 		span.label.title
+		//- 			span(name="attr_setting_deity_label").space-after
+		//- 			span(data-i18n="features")
+		//- 		span.uppercase.info(data-i18n="deity_features_info")
+		//- +hidden-input("setting_show_origin")(value="0").hider
+		//- label.sheet-2col
+		//- 	+text-input("origin")
+		//- 	.label.text.title(data-i18n="origin")
 	//- Rep, Hold, and Tier
 	.rep-and-hold.flex.def-margin
 		.rep.flex.col45
@@ -94,71 +104,74 @@ mixin makeupgrade(label, numboxes, def, desc)
 				each num in range(1,4)
 					+checkbox("crew_tier")(value=num).checkbox.circlebox.fakeradio
 	//- Claims
-	.claims.free-repcontrol
-		.claimsbody
-			each num in range(1,5)
-				+claimbox(num)
-				if (num !== 5)
-					+claimbridge(`${num}_${num+1}`, "hori")
-			each num in range(1,5)
-				+claimbridge(`${num}_${num+5}`, "vert")
-				if (num !== 5)
-					div
-			+claimbox(6)
-			+claimbridge("6_7", "hori")
-			+claimbox(7)
-			+claimbridge("7_8", "hori")
-			.lairbox.flex-center.uppercase(data-i18n="lair")
-			+claimbridge("8_9", "hori")
-			+claimbox(9)
-			+claimbridge("9_10", "hori")
-			+claimbox(10)
-			each num in range(6,10)
-				+claimbridge(`${num}_${num+5}`, "vert")
-				if (num !== 10)
-					div
-			each num in range(11,15)
-				+claimbox(num)
-				if (num !== 15)
-					+claimbridge(`${num}_${num+1}`, "hori")
-		fieldset.repeating_claim
-			each num in range(1,5)
-				+claimbridge(`top_${num}`, "vert")
-				if (num !== 5)
-					div
-			each num in range(1,5)
-				+claimbox(num)
-				if (num !== 5)
-					+claimbridge(`${num}_${num+1}`, "hori")
+	//- TODO DELETE
+	//- .claims.free-repcontrol
+	//- 	.claimsbody
+	//- 		each num in range(1,5)
+	//- 			+claimbox(num)
+	//- 			if (num !== 5)
+	//- 				+claimbridge(`${num}_${num+1}`, "hori")
+	//- 		each num in range(1,5)
+	//- 			+claimbridge(`${num}_${num+5}`, "vert")
+	//- 			if (num !== 5)
+	//- 				div
+	//- 		+claimbox(6)
+	//- 		+claimbridge("6_7", "hori")
+	//- 		+claimbox(7)
+	//- 		+claimbridge("7_8", "hori")
+	//- 		.lairbox.flex-center.uppercase(data-i18n="lair")
+	//- 		+claimbridge("8_9", "hori")
+	//- 		+claimbox(9)
+	//- 		+claimbridge("9_10", "hori")
+	//- 		+claimbox(10)
+	//- 		each num in range(6,10)
+	//- 			+claimbridge(`${num}_${num+5}`, "vert")
+	//- 			if (num !== 10)
+	//- 				div
+	//- 		each num in range(11,15)
+	//- 			+claimbox(num)
+	//- 			if (num !== 15)
+	//- 				+claimbridge(`${num}_${num+1}`, "hori")
+	//- 	fieldset.repeating_claim
+	//- 		each num in range(1,5)
+	//- 			+claimbridge(`top_${num}`, "vert")
+	//- 			if (num !== 5)
+	//- 				div
+	//- 		each num in range(1,5)
+	//- 			+claimbox(num)
+	//- 			if (num !== 5)
+	//- 				+claimbridge(`${num}_${num+1}`, "hori")
 	//- Heat and Coin
+	// TOOD REORGANIZE THE CSS HERE? OR AT LEAST RENAME 'HEAT-AND-VAULT'
 	.heat-and-vault.flex.def-margin
-		//- Heat
-		.heat.col45.flex
-			//- Heat markers
-			.heat1.blackheader
-				.label
-					span(name="attr_setting_heat_label")
-			.heat2.blackborder.flex
-				+radio("heat")(value="0", checked).tooth.zero
-				each num in range(1,9)
-					+radio("heat")(value=num).tooth.stresstooth
-			//- Wanted Level
-			.heat3
-				.blackheader
-					+roll("Wanted", "{{type=vice}} {{short=short}} {{title-entanglement=1}} {{title=^{entanglement}}} {{subtitle=^{wantedroll1}@{heat}&nbsp;@{setting_heat_label}^{wantedroll2}}} @{wanted_formula}").label.inherit.rollbutton
-						span(name="attr_setting_wanted_label")
-					+hidden-input("wanted_formula")(value=zerodiceFormula)
-				.wantedholder.flex
-					+radio("wanted")(value="0", checked).tooth.zero
-					each num in range(1,4)
-						+radio("wanted")(value=num).tooth.regulartooth
+		//- TODO MOVE THIS TO FACTION SHEETS
+		//- //- Heat
+		//- .heat.col45.flex
+		//- 	//- Heat markers
+		//- 	.heat1.blackheader
+		//- 		.label
+		//- 			span(name="attr_setting_heat_label")
+		//- 	.heat2.blackborder.flex
+		//- 		+radio("heat")(value="0", checked).tooth.zero
+		//- 		each num in range(1,9)
+		//- 			+radio("heat")(value=num).tooth.stresstooth
+		//- 	//- Wanted Level
+		//- 	.heat3
+		//- 		.blackheader
+		//- 			+roll("Wanted", "{{type=vice}} {{short=short}} {{title-entanglement=1}} {{title=^{entanglement}}} {{subtitle=^{wantedroll1}@{heat}&nbsp;@{setting_heat_label}^{wantedroll2}}} @{wanted_formula}").label.inherit.rollbutton
+		//- 				span(name="attr_setting_wanted_label")
+		//- 			+hidden-input("wanted_formula")(value=zerodiceFormula)
+		//- 		.wantedholder.flex
+		//- 			+radio("wanted")(value="0", checked).tooth.zero
+		//- 			each num in range(1,4)
+		//- 				+radio("wanted")(value=num).tooth.regulartooth
 		//- Coin
 		.crewcoin.col52b
 			.col100.flex
 				.blackheader.crewcoin1
 					.label(data-i18n="coin")
 				.greyheader.crewcoin2
-					.label(data-i18n="vaults")
+					.label(data-i18n="coffers")
 			.col100.flex.crewcoin-coins
 				+radio("crewcoin")(value="0", checked).zero
 				each num in range(1,4)
@@ -169,7 +182,8 @@ mixin makeupgrade(label, numboxes, def, desc)
 				.crewcoinbar
 				each num in range(9,16)
 					+radio("crewcoin")(value=num).radiobox.vaultcoin
-			.col100.crewcoin-desc(data-i18n="upon_crew_advance")
+			//- TODO DELETE THIS
+			//- .col100.crewcoin-desc(data-i18n="upon_crew_advance")
 	//- Special abilities
 	.specialabilities.def-margin
 		.specialheader.label(data-i18n="special_abilities")

@@ -81,6 +81,7 @@
           base[attr] = getTranslationByKey(base[attr]);
         }
       });
+      // TODO DROP THE IF STATEMENT HERE
       if (!["ghost", "hull"].includes(playbook)) {
         playbookData[playbook].friend = [...Array(5).keys()]
           .map(i => ({
@@ -94,6 +95,7 @@
           description:
             getTranslationByKey(`playbook_ability_${name}_description`)
         }));
+      // TODO REMOVE SPIRIT PLAYBOOKS
       if (spiritPlaybooks.includes(playbook)) {
         playbookData[playbook].ability[0].check = "1";
       }
@@ -361,7 +363,7 @@
             // do not reset attributes which have been changed by the user
             .filter(name => !spiritPlaybooks.includes(sourceName) ||
               !actionsFlat.includes(name))
-            // do not reset action dots if changing to a spirit playbook
+            // do not reset action dots if changing to a spirit playbook - TODO DELETE THIS
             .filter(name => v[name] !== (defaultValues[name] || ""))
             // do not set attributes if current value is equal to sheet defaults
             .reduce((m, name) => {
@@ -482,7 +484,7 @@
     getAttrs(["version"], v => {
       const addVersion = (object, version) => {
         object.version = version;
-        object.character_sheet = `Blades in the Dark v${version}`;
+        object.character_sheet = `Sea of Dead Men v${version}`;
       };
       const upgradeSheet = version => {
         const versionMajor = version && parseInt(version.split(".")[0]),
@@ -645,17 +647,18 @@
     });
   }
 
-  function handleDarkTalentChange(attribute) {
-    getAttrs([
-      `setting_dark_talent_${attribute}`,
-      `setting_resbonus_${attribute}`
-    ], v => {
-      const resistanceBonus =
-        (parseInt(v[`setting_resbonus_${attribute}`]) || 0) +
-        ((`${v[`setting_dark_talent_${attribute}`]}` === "1") ? 1 : -1);
-      setAttr(`setting_resbonus_${attribute}`, resistanceBonus);
-    });
-  }
+  // TODO DELETE
+  // function handleDarkTalentChange(attribute) {
+  //   getAttrs([
+  //     `setting_dark_talent_${attribute}`,
+  //     `setting_resbonus_${attribute}`
+  //   ], v => {
+  //     const resistanceBonus =
+  //       (parseInt(v[`setting_resbonus_${attribute}`]) || 0) +
+  //       ((`${v[`setting_dark_talent_${attribute}`]}` === "1") ? 1 : -1);
+  //     setAttr(`setting_resbonus_${attribute}`, resistanceBonus);
+  //   });
+  // }
 
   function generateFactions() {
     setAttr("show_faction_generatebutton", "0");
@@ -1072,7 +1075,7 @@
         crew_xp_condition: "crew_vigilantes_xp_condition",
         hunting_grounds_type: "crew_vigilantes_hunting_grounds_type",
         hunting_grounds_description: "crew_vigilantes_hunting_grounds_description",
-        setting_show_origin: "1",
+        setting_show_purpose: "1",
         upgrade_resolve_check_1: "1"
       },
       crewability: ["as_good_as_your_word", "avengers", "thorn_in_your_side", "misdirection", "uncanny_preparation", "moral_compass", "favors", "roots", "veteran"],
@@ -2264,7 +2267,8 @@
     setting_show_cohort: "0",
     setting_show_deity: "0",
     setting_show_frame: "0",
-    setting_show_origin: "0",
+    setting_show_loyalty: "0",
+    setting_show_purpose: "0",
     setting_show_strictures: "0",
     setting_traumata_set: "normal",
     setting_vampirexp: "0",

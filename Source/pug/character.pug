@@ -1,11 +1,12 @@
 -
+	//- TODO REMOVE THESE OPTIONS
 	const traumaData = {
 		normal: ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
-		ghost: ["chaotic", "destructive", "furious", "obsessive", "territorial", "savage"],
-		hull: ["clanking", "leaking", "fixated", "smoking", "sparking", "unstable"],
-		vampire: ["cold", "haunted", "obsessed", "paranoid", "ruthless", "secretive", "unstable", "vicious"]
+		//- ghost: ["chaotic", "destructive", "furious", "obsessive", "territorial", "savage"],
+		//- hull: ["clanking", "leaking", "fixated", "smoking", "sparking", "unstable"],
+		//- vampire: ["cold", "haunted", "obsessed", "paranoid", "ruthless", "secretive", "unstable", "vicious"]
 	};
-	const strictures = ["slumber", "forbidden", "repelled", "bestial", "bound"];
+	//- const strictures = ["slumber", "forbidden", "repelled", "bestial", "bound"];
 
 //- Left column
 .left-column.grid
@@ -45,19 +46,20 @@
 				span.uppercase.info(data-i18n="vice_info")
 			+roll("Vice", "{{subtitle=^{viceroll1}@{stress}&nbsp;@{setting_stress_label}^{viceroll2}}} {{type=vice}} {{title-vice=1}} {{title=^{vice}}} @{vice_formula} {{instructions=^{vice_instructions}}}")(data-i18n="indulge_vice").vicebutton.borderbutton
 			+hidden-input("vice_formula")(value=zerodiceFormula)
-		.vice.ghost
-			span.italic(data-i18n="ghost_viceblurb")
-		.vice.hull
-			label
-				+text-input("hull_functions")(data-i18n-placeholder="choose_3_functions")
-				+hidden-input("hull_functions")(value="")
-				.text
-					span.label.title(data-i18n="functions")
-					span.uppercase.info(data-i18n="functions_info")
-			span.italic(data-i18n="hull_viceblurb")
-		.vice.vampire
-			span.italic(data-i18n="vampire_viceblurb")
-			+roll("Vice", "{{subtitle=^{viceroll1}@{stress}&nbsp;@{setting_stress_label}^{viceroll2}}} {{type=vice}} {{title-vice=1}} {{title=^{vice}}} @{vice_formula} {{instructions=^{vice_instructions}}}")(data-i18n="indulge_vice").vicebutton.borderbutton
+		//- TODO CLEANUP
+		//- .vice.ghost
+		//- 	span.italic(data-i18n="ghost_viceblurb")
+		//- .vice.hull
+		//- 	label
+		//- 		+text-input("hull_functions")(data-i18n-placeholder="choose_3_functions")
+		//- 		+hidden-input("hull_functions")(value="")
+		//- 		.text
+		//- 			span.label.title(data-i18n="functions")
+		//- 			span.uppercase.info(data-i18n="functions_info")
+		//- 	span.italic(data-i18n="hull_viceblurb")
+		//- .vice.vampire
+		//- 	span.italic(data-i18n="vampire_viceblurb")
+		//- 	+roll("Vice", "{{subtitle=^{viceroll1}@{stress}&nbsp;@{setting_stress_label}^{viceroll2}}} {{type=vice}} {{title-vice=1}} {{title=^{vice}}} @{vice_formula} {{instructions=^{vice_instructions}}}")(data-i18n="indulge_vice").vicebutton.borderbutton
 	//- Stress and Trauma
 	.stress.flex.sheet-2col
 		//- Stress markers
@@ -174,7 +176,7 @@
 			.label.markxp(data-i18n="mark_xp:")
 			.label(data-i18n="playbook_advancement")
 			.xpholder.flex
-				+hidden-input("setting_vampirexp")(value="0").vampirexp
+				+hidden-input("setting_vampirexp")(value="0").vampirexp //TODO remove vampire stuff
 				+radio("playbook_xp")(value="0", checked).tooth.zero
 				each num in range(1,10)
 					if (num === 9)
@@ -217,17 +219,17 @@
 				li
 					+text-input("gatherinfo6")(data-i18n-placeholder="gatherinfo_how_can_I_find").inherit
 				li(data-i18n="gatherinfo_whats_going_on")
-		+hidden-input("setting_show_strictures")(value="0").hider
-		.strictures.def-margin
-			.plainheader.label(data-i18n="strictures")
-			div
-				span.italic(data-i18n="stricturesblurb")
-			each name in strictures
-				div
-					label
-						+checkbox(`stricture_${name}`).checkbox.squarebox
-						span.label(data-i18n=name)
-					span(data-i18n=`strictures_${name}`)
+		//- +hidden-input("setting_show_strictures")(value="0").hider
+		//- .strictures.def-margin
+		//- 	.plainheader.label(data-i18n="strictures")
+		//- 	div
+		//- 		span.italic(data-i18n="stricturesblurb")
+		//- 	each name in strictures
+		//- 		div
+		//- 			label
+		//- 				+checkbox(`stricture_${name}`).checkbox.squarebox
+		//- 				span.label(data-i18n=name)
+		//- 			span(data-i18n=`strictures_${name}`)
 //- Right column
 .right-column.grid
 	//- Playbook
@@ -280,13 +282,14 @@
 						+checkbox(null).expand
 						+textarea("description")(data-i18n-placeholder="description")
 				+hidden-input("setting_show_frame")(value="0").hider
-				.frame.small-margin
-					+text-input("frame")(value="Frame").smallcaps
-					+textarea("frame_description")(data-i18n-placeholder="frame_description")
-					fieldset.repeating_framefeature
-						.item
-							+checkbox("check").checkbox.circlebox
-							+text-input("name")(data-i18n-placeholder="frame_feature").itemname
+				//- TODO DELETE THIS
+				//- .frame.small-margin
+				//- 	+text-input("frame")(value="Frame").smallcaps
+				//- 	+textarea("frame_description")(data-i18n-placeholder="frame_description")
+				//- 	fieldset.repeating_framefeature
+				//- 		.item
+				//- 			+checkbox("check").checkbox.circlebox
+				//- 			+text-input("name")(data-i18n-placeholder="frame_feature").itemname
 			//- Regular items
 			.regularitems.free-repcontrol
 				fieldset.repeating_item
@@ -312,25 +315,26 @@
 						.item-description
 							+checkbox("expand").expand
 							+textarea("description")(data-i18n-placeholder="description")
-		//- Alchemicals
-		.def-margin
-			input.title-checkbox(type="checkbox", name="attr_show_alchemicals", value="1")
-			span.label.plainheader(name="attr_setting_alchemicals_label")
-			.alchemicals.free-repcontrol
-				+hidden-input("setting_show_bandolier")(value="0").hider
-				.bandolier
-					.item
-						span.bandoliers-name(data-i18n="bandoliers")
-						each bannum in [1,2]
-							each checknum in range(1,3)
-								+checkbox(`bandolier${bannum}_check_${checknum}`).checkbox.squarebox
-								if (checknum !== 3)
-									span.floatingbar
-					.bandolier-desc(data-i18n="when_you_use_bandolier")
-				fieldset.repeating_alchemical
-					+checkbox(null).alchemicals-expand
-					+autoexpand("name")
-					+textarea("description").alchemicals-info
+		//- TODO DELETE THIS
+		//- //- Alchemicals
+		//- .def-margin
+		//- 	input.title-checkbox(type="checkbox", name="attr_show_alchemicals", value="1")
+		//- 	span.label.plainheader(name="attr_setting_alchemicals_label")
+		//- 	.alchemicals.free-repcontrol
+		//- 		+hidden-input("setting_show_bandolier")(value="0").hider
+		//- 		.bandolier
+		//- 			.item
+		//- 				span.bandoliers-name(data-i18n="bandoliers")
+		//- 				each bannum in [1,2]
+		//- 					each checknum in range(1,3)
+		//- 						+checkbox(`bandolier${bannum}_check_${checknum}`).checkbox.squarebox
+		//- 						if (checknum !== 3)
+		//- 							span.floatingbar
+		//- 			.bandolier-desc(data-i18n="when_you_use_bandolier")
+		//- 		fieldset.repeating_alchemical
+		//- 			+checkbox(null).alchemicals-expand
+		//- 			+autoexpand("name")
+		//- 			+textarea("description").alchemicals-info
 		//- Planning and Load
 		.planning.def-margin
 			input.title-checkbox(type="checkbox", name="attr_show_planning", value="1", checked)
@@ -398,17 +402,18 @@
 		//- Cohort
 		+hidden-input("setting_show_cohort")(value="0").hider
 		+makecohort("char_cohort_", true)
-		//- Bonus die box
-		.bonusdie
-			.label(data-i18n="bonus_die")
-			.flex
-				.flex-center.bonusdieplus +
-				.bonusdietext
-					.label(data-i18n="push_yourself")
-					span(data-i18n="push_yourself_desc1")
-					span(name="attr_setting_stress_label")
-					span(data-i18n="push_yourself_desc2")
-					.label(data-i18n="devils_bargain")
+		//- TODO DELETE THIS
+		//- //- Bonus die box
+		//- .bonusdie
+		//- 	.label(data-i18n="bonus_die")
+		//- 	.flex
+		//- 		.flex-center.bonusdieplus +
+		//- 		.bonusdietext
+		//- 			.label(data-i18n="push_yourself")
+		//- 			span(data-i18n="push_yourself_desc1")
+		//- 			span(name="attr_setting_stress_label")
+		//- 			span(data-i18n="push_yourself_desc2")
+		//- 			.label(data-i18n="devils_bargain")
 		//- Friends
 		.friends
 			.specialheader.label.flex
