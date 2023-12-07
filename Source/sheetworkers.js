@@ -1099,9 +1099,10 @@
   };
   const playbookData = {
     commander: {
-      ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
+      ability: ["expertise", "master_and_commander", "nobodys_fool", "ready_for_anything", "relentless", "self_control", "sharpshooter", "focused", "veteran"],
       base: {
-        command: "1",
+        command: "2",
+        navigate: "1",
         friends_title: "playbook_commander_friends_title",
         gatherinfo1: "gatherinfo_how_can_I_hurt",
         gatherinfo2: "gatherinfo_whos_most_afraid",
@@ -1110,29 +1111,26 @@
         gatherinfo5: "gatherinfo_how_can_I_get_them",
         gatherinfo6: "gatherinfo_are_they_telling",
         playbook_description: "playbook_commander_description",
-        skirmish: "2",
         xp_condition: "playbook_commander_xp_condition"
       },
       playbookitem: [{
         bold: "1",
-        name: "playbook_item_fine_hand_weapon",
+        name: "playbook_item_fine_rifle",
+        numboxes: "2"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_pair_of_pistols",
         numboxes: "1"
       }, {
         bold: "1",
-        name: "playbook_item_fine_heavy_weapon",
-        numboxes: "2"
-      }, {
-        name: "playbook_item_scary_weapon_or_tool",
+        name: "playbook_item_fine_navigational_tools",
         numboxes: "1"
       }, {
-        name: "playbook_item_manacles_&_chain",
-        numboxes: "0"
+        name: "playbook_item_documents",
+        numboxes: "1"
       }, {
-        name: "playbook_item_rage_essence_vial",
-        numboxes: "0"
-      }, {
-        name: "playbook_item_spiritbane_charm",
-        numboxes: "0"
+        name: "playbook_item_personal_memento",
+        numboxes: "1"
       }]
     },
     cutter: {
