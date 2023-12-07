@@ -1098,6 +1098,43 @@
     }
   };
   const playbookData = {
+    commander: {
+      ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
+      base: {
+        command: "1",
+        friends_title: "playbook_commander_friends_title",
+        gatherinfo1: "gatherinfo_how_can_I_hurt",
+        gatherinfo2: "gatherinfo_whos_most_afraid",
+        gatherinfo3: "gatherinfo_whos_most_dangerous",
+        gatherinfo4: "gatherinfo_what_do_they_intend",
+        gatherinfo5: "gatherinfo_how_can_I_get_them",
+        gatherinfo6: "gatherinfo_are_they_telling",
+        playbook_description: "playbook_commander_description",
+        skirmish: "2",
+        xp_condition: "playbook_commander_xp_condition"
+      },
+      playbookitem: [{
+        bold: "1",
+        name: "playbook_item_fine_hand_weapon",
+        numboxes: "1"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_heavy_weapon",
+        numboxes: "2"
+      }, {
+        name: "playbook_item_scary_weapon_or_tool",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_manacles_&_chain",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_rage_essence_vial",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_spiritbane_charm",
+        numboxes: "0"
+      }]
+    },
     cutter: {
       ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
       base: {
@@ -2072,16 +2109,16 @@
   };
   const actionData = {
     insight: [
-      "hunt",
-      "study",
-      "survey",
-      "tinker"
+      "finesse",
+      "navigate",
+      "patch",
+      "scan"
     ],
     prowess: [
-      "finesse",
-      "prowl",
-      "skirmish",
-      "wreck"
+      "blast",
+      "brawl",
+      "skulk",
+      "vault"
     ],
     resolve: [
       "attune",
