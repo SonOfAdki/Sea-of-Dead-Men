@@ -1237,6 +1237,39 @@
         numboxes: "1"
       }]
     },
+    scoundrel: {
+      ability: ["jack_of_all_trades", "ambush", "honest_face", "i_know_a_guy", "lead_from_behind", "set_the_stage", "weaving_the_web", "weasel", "veteran"],
+      base: {
+        sway: "2",
+        skulk: "1",
+        friends_title: "playbook_scoundrel_friends_title",
+        gatherinfo1: "gatherinfo_how_can_I_hurt",
+        gatherinfo2: "gatherinfo_whos_most_afraid",
+        gatherinfo3: "gatherinfo_whos_most_dangerous",
+        gatherinfo4: "gatherinfo_what_do_they_intend",
+        gatherinfo5: "gatherinfo_how_can_I_get_them",
+        gatherinfo6: "gatherinfo_are_they_telling",
+        playbook_description: "playbook_scoundrel_description",
+        xp_condition: "playbook_scoundrel_xp_condition"
+      },
+      playbookitem: [{
+        bold: "1",
+        name: "playbook_item_fine_concealed_weapon",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_forgery_kit",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_loaded_dice",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_lockpicking_tools",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_sleeping_powder",
+        numboxes: "0"
+      }]
+    },
     cutter: {
       ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
       base: {
