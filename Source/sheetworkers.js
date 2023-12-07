@@ -1168,6 +1168,40 @@
         numboxes: "0"
       }]
     },
+    occultist: {
+      ability: ["from_the_deep", "black_spot", "born_in_brine", "familiar", "iron_will", "ritual", "tempest", "warded", "veteran"],
+      base: {
+        attune: "2",
+        scan: "1",
+        friends_title: "playbook_occultist_friends_title",
+        gatherinfo1: "gatherinfo_how_can_I_hurt",
+        gatherinfo2: "gatherinfo_whos_most_afraid",
+        gatherinfo3: "gatherinfo_whos_most_dangerous",
+        gatherinfo4: "gatherinfo_what_do_they_intend",
+        gatherinfo5: "gatherinfo_how_can_I_get_them",
+        gatherinfo6: "gatherinfo_are_they_telling",
+        playbook_description: "playbook_occultist_description",
+        xp_condition: "playbook_occultist_xp_condition"
+      },
+      playbookitem: [{
+        bold: "1",
+        name: "playbook_item_fine_whalebone_knife",
+        numboxes: "1"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_warding_talisman",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_fanciful_map",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_occult_focus",
+        numboxes: "0"
+      }, {
+        name: "playbook_item_trained_pet",
+        numboxes: "1"
+      }]
+    },
     cutter: {
       ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
       base: {
