@@ -1133,6 +1133,41 @@
         numboxes: "1"
       }]
     },
+    mariner: {
+      ability: ["in_fine_condition", "bombardier", "no_rest_for_the_weary", "saboteur", "sawbones", "shipshape", "to_the_brink", "sturdy", "veteran"],
+      base: {
+        navigate: "2",
+        patch: "1",
+        friends_title: "playbook_mariner_friends_title",
+        gatherinfo1: "gatherinfo_how_can_I_hurt",
+        gatherinfo2: "gatherinfo_whos_most_afraid",
+        gatherinfo3: "gatherinfo_whos_most_dangerous",
+        gatherinfo4: "gatherinfo_what_do_they_intend",
+        gatherinfo5: "gatherinfo_how_can_I_get_them",
+        gatherinfo6: "gatherinfo_are_they_telling",
+        playbook_description: "playbook_mariner_description",
+        xp_condition: "playbook_mariner_xp_condition"
+      },
+      playbookitem: [{
+        bold: "1",
+        name: "playbook_item_fine_bottle_of_rum",
+        numboxes: "1"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_carpenters_tools",
+        numboxes: "1"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_explosive",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_trained_pet",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_warding_talisman",
+        numboxes: "0"
+      }]
+    },
     cutter: {
       ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
       base: {
