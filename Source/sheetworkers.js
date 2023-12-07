@@ -1202,6 +1202,41 @@
         numboxes: "1"
       }]
     },
+    reaver: {
+      ability: ["savage", "armed_to_the_teeth", "bodyguard", "fearsome_reputation", "not_without_a_fight", "resilient", "right_bastard", "battleborn", "veteran"],
+      base: {
+        brawl: "2",
+        command: "1",
+        friends_title: "playbook_reaver_friends_title",
+        gatherinfo1: "gatherinfo_how_can_I_hurt",
+        gatherinfo2: "gatherinfo_whos_most_afraid",
+        gatherinfo3: "gatherinfo_whos_most_dangerous",
+        gatherinfo4: "gatherinfo_what_do_they_intend",
+        gatherinfo5: "gatherinfo_how_can_I_get_them",
+        gatherinfo6: "gatherinfo_are_they_telling",
+        playbook_description: "playbook_reaver_description",
+        xp_condition: "playbook_reaver_xp_condition"
+      },
+      playbookitem: [{
+        bold: "1",
+        name: "playbook_item_fine_brace_of_pistols",
+        numboxes: "2"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_hand_weapon",
+        numboxes: "1"
+      }, {
+        bold: "1",
+        name: "playbook_item_fine_heavy_armor",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_scary_weapon_or_tool",
+        numboxes: "1"
+      }, {
+        name: "playbook_item_manacles_and_chain",
+        numboxes: "1"
+      }]
+    },
     cutter: {
       ability: ["battleborn", "bodyguard", "ghost_fighter", "leader", "mule", "not_to_be_trifled_with", "savage", "vigorous", "veteran"],
       base: {
