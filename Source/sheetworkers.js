@@ -1652,8 +1652,8 @@
       numboxes: "1"
     },
     {
-      name: "throwing_knives",
-      description: "throwing_knives_description",
+      name: "a_firearm",
+      description: "a_firearm_description",
       numboxes: "1"
     },
     {
@@ -1687,47 +1687,37 @@
     {
       name: "+heavy",
       description: "+heavy_description",
-      numboxes: "3",
+      numboxes: "2",
       short: "1"
     },
     {
-      name: "burglary_gear",
-      description: "burglary_gear_description",
+      name: "a_bottle_of_rum",
+      description: "a_bottle_of_rum_description",
+      numboxes: "1"
+    },
+    {
+      name: "a_crude_explosive",
+      description: "a_crude_explosive_description",
+      numboxes: "1"
+    },
+    {
+      name: "a_musical_instrument",
+      description: "a_musical_instrument_description",
       numboxes: "1"
     },
     {
       name: "climbing_gear",
       description: "climbing_gear_description",
-      numboxes: "2"
-    },
-    {
-      name: "arcane_implements",
-      description: "arcane_implements_description",
       numboxes: "1"
     },
     {
-      name: "documents",
-      description: "documents_description",
+      name: "carpenters_tools",
+      description: "carpenters_tools_description",
       numboxes: "1"
     },
     {
-      name: "subterfuge_supplies",
-      description: "subterfuge_supplies_description",
-      numboxes: "1"
-    },
-    {
-      name: "demolition_tools",
-      description: "demolition_tools_description",
-      numboxes: "2"
-    },
-    {
-      name: "tinkering_tools",
-      description: "tinkering_tools_description",
-      numboxes: "1"
-    },
-    {
-      name: "lantern",
-      description: "lantern_description",
+      name: "navigational_tools",
+      description: "navigational_tools_description",
       numboxes: "1"
     }
   ];
