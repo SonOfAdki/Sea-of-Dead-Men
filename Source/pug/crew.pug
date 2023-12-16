@@ -38,10 +38,15 @@ mixin makeupgrade(label, numboxes, def, desc)
 		label.sheet-2col
 			+text-input("flagship")
 			.label.text.title(data-i18n="flagship")
+
 		+hidden-input("setting_show_purpose")(value="0").hider
 		label.sheet-2col
-			+text-input("purpose")
-			.label.text.title(data-i18n="purpose")
+			+autoexpand("purpose")
+			+hidden-input("purpose")(value="")
+			.text
+				span.label.title(data-i18n="purpose")
+				span.uppercase.info(data-i18n="purpose_info")
+
 		+hidden-input("setting_show_loyalty")(value="0").hider
 		label.sheet-2col
 			+text-input("loyalty")
