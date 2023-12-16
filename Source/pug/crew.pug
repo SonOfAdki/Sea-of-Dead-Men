@@ -47,10 +47,42 @@ mixin makeupgrade(label, numboxes, def, desc)
 				span.label.title(data-i18n="purpose")
 				span.uppercase.info(data-i18n="purpose_info")
 
+		//- TODO THIS ISN'T WORKING AS EXPECTED
+		//- AND DOESN'T INCLUDE THE TEXT INPUT
 		+hidden-input("setting_show_loyalty")(value="0").hider
 		label.sheet-2col
-			+text-input("loyalty")
-			.label.text.title(data-i18n="loyalty")
+			each loyalty in ["valdesia","revelle","sallice","meghra","segamba","waturey","ourogan"]
+				label.text-button
+					+radio("loyalty")(value=`${loyalty}`)
+
+		//- //- Individual traumata
+		//- .stress4.blackborder
+		//- 	+hidden-input("setting_traumata_set")(value="normal").input
+		//- 	each traumas, category in traumaData
+		//- 		div(class=category)
+		//- 			.flex
+		//- 				each trauma, i in traumas.slice(0, traumas.length / 2)
+		//- 					label.text-button
+		//- 						+checkbox(`trauma_${trauma}`)(data-i18n=trauma)
+		//- 					if (i < traumas.length / 2 - 1)
+		//- 						span —
+		//- 			.flex
+		//- 				each trauma, i in traumas.slice(traumas.length / 2)
+		//- 					label.text-button
+		//- 						+checkbox(`trauma_${trauma}`)(data-i18n=trauma)
+		//- 					if (i < traumas.length / 2 - 1)
+		//- 						span —
+
+
+		//- +hidden-input("setting_show_loyalty")(value="0").hider
+		//- label.sheet-2col
+		//- 	+text-input("loyalty")
+		//- 	.label.text.title(data-i18n="loyalty")
+
+
+
+
+
 		//- TODO DELETE
 		//- +hidden-input("setting_show_deity")(value="0").hider
 		//- label
