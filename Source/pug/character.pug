@@ -194,42 +194,32 @@
 				+autoexpand("xp_condition2") You expressed your beliefs, drives, heritage, or background.
 			li
 				+autoexpand("xp_condition3") You struggled with issues from your vice or traumas during the session.
-	//- Teamwork
-	.teamwork
-		.plainheader.label(data-i18n="teamwork")
-		.teamworkbox(data-i18n="assist_a_teammate")
-		.teamworkbox(data-i18n="lead_a_group_action")
-		.teamworkbox(data-i18n="protect_a_teammate")
-		.teamworkbox(data-i18n="set_up_a_teammate")
-	//- Gather Information
-	.gatherinfo
-		.plainheader.label(data-i18n="gather_information")
-		div
-			ul
-				li
-					+text-input("gatherinfo1")(data-i18n-placeholder="gatherinfo_what_do_they_intend").inherit
-				li
-					+text-input("gatherinfo2")(data-i18n-placeholder="gatherinfo_how_can_I_get_them").inherit
-				li
-					+text-input("gatherinfo3")(data-i18n-placeholder="gatherinfo_what_are_they_really").inherit
-				li
-					+text-input("gatherinfo4")(data-i18n-placeholder="gatherinfo_what_should_I_look").inherit
-				li
-					+text-input("gatherinfo5")(data-i18n-placeholder="gatherinfo_wheres_the_weakness").inherit
-				li
-					+text-input("gatherinfo6")(data-i18n-placeholder="gatherinfo_how_can_I_find").inherit
-				li(data-i18n="gatherinfo_whats_going_on")
-		//- +hidden-input("setting_show_strictures")(value="0").hider
-		//- .strictures.def-margin
-		//- 	.plainheader.label(data-i18n="strictures")
-		//- 	div
-		//- 		span.italic(data-i18n="stricturesblurb")
-		//- 	each name in strictures
-		//- 		div
-		//- 			label
-		//- 				+checkbox(`stricture_${name}`).checkbox.squarebox
-		//- 				span.label(data-i18n=name)
-		//- 			span(data-i18n=`strictures_${name}`)
+	//- Planning and Load
+	.planning.sheet-2col
+		input.title-checkbox(type="checkbox", name="attr_show_planning", value="1", checked)
+		span.label.plainheader(data-i18n="planning_load")
+		.planning-content
+			.planningdesc(data-i18n="planningdesc")
+	.planning
+		.teamworkbox
+			span.bold(data-i18n="assault")
+			span.italic(data-i18n="detail_assault")
+		.teamworkbox
+			span.bold(data-i18n="deception")
+			span.italic(data-i18n="detail_deception")
+		.teamworkbox
+			span.bold(data-i18n="occult")
+			span.italic(data-i18n="detail_occult")
+	.planning
+		.teamworkbox
+			span.bold(data-i18n="transport")
+			span.italic(data-i18n="detail_transport")
+		.teamworkbox
+			span.bold(data-i18n="stealth")
+			span.italic(data-i18n="detail_stealth")
+		.teamworkbox
+			span.bold(data-i18n="social")
+			span.italic(data-i18n="detail_social")
 //- Right column
 .right-column.grid
 	//- Playbook
@@ -281,15 +271,6 @@
 					.item-description
 						+checkbox(null).expand
 						+textarea("description")(data-i18n-placeholder="description")
-				+hidden-input("setting_show_frame")(value="0").hider
-				//- TODO DELETE THIS
-				//- .frame.small-margin
-				//- 	+text-input("frame")(value="Frame").smallcaps
-				//- 	+textarea("frame_description")(data-i18n-placeholder="frame_description")
-				//- 	fieldset.repeating_framefeature
-				//- 		.item
-				//- 			+checkbox("check").checkbox.circlebox
-				//- 			+text-input("name")(data-i18n-placeholder="frame_feature").itemname
 			//- Regular items
 			.regularitems.free-repcontrol
 				fieldset.repeating_item
@@ -315,50 +296,13 @@
 						.item-description
 							+checkbox("expand").expand
 							+textarea("description")(data-i18n-placeholder="description")
-		//- TODO DELETE THIS
-		//- //- Alchemicals
-		//- .def-margin
-		//- 	input.title-checkbox(type="checkbox", name="attr_show_alchemicals", value="1")
-		//- 	span.label.plainheader(name="attr_setting_alchemicals_label")
-		//- 	.alchemicals.free-repcontrol
-		//- 		+hidden-input("setting_show_bandolier")(value="0").hider
-		//- 		.bandolier
-		//- 			.item
-		//- 				span.bandoliers-name(data-i18n="bandoliers")
-		//- 				each bannum in [1,2]
-		//- 					each checknum in range(1,3)
-		//- 						+checkbox(`bandolier${bannum}_check_${checknum}`).checkbox.squarebox
-		//- 						if (checknum !== 3)
-		//- 							span.floatingbar
-		//- 			.bandolier-desc(data-i18n="when_you_use_bandolier")
-		//- 		fieldset.repeating_alchemical
-		//- 			+checkbox(null).alchemicals-expand
-		//- 			+autoexpand("name")
-		//- 			+textarea("description").alchemicals-info
-		//- Planning and Load
-		.planning.def-margin
-			input.title-checkbox(type="checkbox", name="attr_show_planning", value="1", checked)
-			span.label.plainheader(data-i18n="planning_load")
-			.planning-content
-				.planningdesc(data-i18n="planningdesc")
-				.teamworkbox
-					span.bold(data-i18n="assault")
-					span.italic(data-i18n="detail_assault")
-				.teamworkbox
-					span.bold(data-i18n="deception")
-					span.italic(data-i18n="detail_deception")
-				.teamworkbox
-					span.bold(data-i18n="occult")
-					span.italic(data-i18n="detail_occult")
-				.teamworkbox
-					span.bold(data-i18n="transport")
-					span.italic(data-i18n="detail_transport")
-				.teamworkbox
-					span.bold(data-i18n="stealth")
-					span.italic(data-i18n="detail_stealth")
-				.teamworkbox
-					span.bold(data-i18n="social")
-					span.italic(data-i18n="detail_social")
+		//- Teamwork
+		.teamwork
+			.plainheader.label(data-i18n="teamwork")
+			.teamworkbox(data-i18n="assist_a_teammate")
+			.teamworkbox(data-i18n="lead_a_group_action")
+			.teamworkbox(data-i18n="protect_a_teammate")
+			.teamworkbox(data-i18n="set_up_a_teammate")
 	//- Action ratings
 	.actioncolumn
 		each actions, attribute in actionData
@@ -402,18 +346,6 @@
 		//- Cohort
 		+hidden-input("setting_show_cohort")(value="0").hider
 		+makecohort("char_cohort_", true)
-		//- TODO DELETE THIS
-		//- //- Bonus die box
-		//- .bonusdie
-		//- 	.label(data-i18n="bonus_die")
-		//- 	.flex
-		//- 		.flex-center.bonusdieplus +
-		//- 		.bonusdietext
-		//- 			.label(data-i18n="push_yourself")
-		//- 			span(data-i18n="push_yourself_desc1")
-		//- 			span(name="attr_setting_stress_label")
-		//- 			span(data-i18n="push_yourself_desc2")
-		//- 			.label(data-i18n="devils_bargain")
 		//- Friends
 		.friends
 			.specialheader.label.flex
