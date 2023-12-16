@@ -155,9 +155,9 @@
 			//- Stash
 			.stash
 				+radio("stash")(value="0", checked).zero
-				each num in range(1,40)
+				each num in range(1,24)
 					+radio("stash")(value=num).radiobox
-					if (num % 10 === 0)
+					if (num % 8 === 0)
 						br
 	//- Special abilities
 	.specialabilities.sheet-2col

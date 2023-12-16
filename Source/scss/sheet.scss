@@ -1377,12 +1377,12 @@ input.sheet-zero {
 		margin-right: calc((100% - 126px)/9);
 	}
 	input:checked ~ .sheet-radiobox + span { background: $lighter }
-	input.sheet-radiobox:nth-of-type(10n+1) {
+	input.sheet-radiobox:nth-of-type(8n+1) {
 		margin: -2px -17px 0 3px;
 		width: 15px;
 		height: 15px;
 	}
-	.sheet-radiobox:nth-of-type(10n+1) + span {
+	.sheet-radiobox:nth-of-type(8n+1) + span {
 		width: 14px;
 		height: 14px;
 		border: 1px solid black;
