@@ -26,17 +26,23 @@
 			+text-input("look")
 			.label.text.title(data-i18n="look")
 		label
-			+autoexpand("heritage")
-			+hidden-input("heritage")(value="")
-			.text
-				span.label.title(data-i18n="heritage")
-				//- span.uppercase.info(data-i18n="heritage_info")
+			+text-input("heritage")
+			.label.text.title(data-i18n="heritage")
 		label
-			+autoexpand("background")
-			+hidden-input("background")(value="")
-			.text
-				span.label.title(data-i18n="background")
-				//- span.uppercase.info(data-i18n="background_info")
+			+text-input("background")
+			.label.text.title(data-i18n="background")
+		//- label
+		//- 	+autoexpand("heritage")
+		//- 	+hidden-input("heritage")(value="")
+		//- 	.text
+		//- 		span.label.title(data-i18n="heritage")
+		//- 		//- span.uppercase.info(data-i18n="heritage_info")
+		//- label
+		//- 	+autoexpand("background")
+		//- 	+hidden-input("background")(value="")
+		//- 	.text
+		//- 		span.label.title(data-i18n="background")
+		//- 		//- span.uppercase.info(data-i18n="background_info")
 		+hidden-input("setting_vice_type")(value="normal").vice-input
 		label.vice.normal
 			+autoexpand("vice_purveyor")
